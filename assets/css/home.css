@@ -1,0 +1,180 @@
+/* Home Section */
+#home {
+    display: flex;
+    flex-direction: row; /* Align content and image side by side */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 100vh;
+    padding: 50px 5%;
+    background-color: #f0f8ff; /* Light background color */
+    background-image: url('assets/images/abstract-texture.png'); /* Subtle pattern or texture */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark Mode Styling for Home Section */
+body.dark-mode #home {
+    background-color: #121212; /* Dark background color */
+    background-image: url('assets/images/abstract-texture-dark.png'); /* Darker texture or pattern */
+}
+
+/* Text Styling */
+.home-content {
+    max-width: 50%;
+    text-align: left; /* Align the text to the left */
+    margin-right: 20px;
+    animation: fadeIn 1s forwards 0.5s;
+}
+
+.home-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #2a4365; /* Primary blue color */
+    position: relative;
+    opacity: 0;
+    animation: fadeIn 1s forwards 0.5s;
+}
+
+.home-title span {
+    display: inline-block;
+    position: relative;
+}
+
+/* Subtitle Styling */
+.home-subtitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #2a4365; /* Primary blue color */
+    margin-top: 10px;
+    opacity: 0.9;
+    animation: fadeIn 1s forwards 1s;
+}
+
+/* Description Styling */
+.home-description {
+    font-size: 1.2rem;
+    font-weight: 300;
+    max-width: 700px;
+    margin-top: 15px;
+    color: #2a4365; /* Primary blue color */
+    line-height: 1.6;
+    opacity: 0.8;
+    animation: fadeIn 1s forwards 1.5s;
+}
+
+/* Dark Mode - Text Styling */
+.dark-mode .home-title, 
+.dark-mode .home-subtitle, 
+.dark-mode .home-description {
+    color: #ffffff; /* White text color in dark mode */
+}
+
+.dark-mode .home-subtitle,
+.dark-mode .home-description {
+    animation: fadeIn 1s forwards 1.5s;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* CTA Buttons Styling */
+.cta-buttons {
+    margin-top: 25px;
+    display: flex;
+    gap: 20px;
+    opacity: 0;
+    animation: fadeIn 1s forwards 2s;
+}
+
+/* Button Styles */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.primary-btn {
+    background: #2a4365;
+    color: #fff;
+    border: none;
+}
+
+.primary-btn:hover {
+    background: #1e2a47;
+}
+
+.secondary-btn {
+    background: transparent;
+    color: #2a4365;
+    border: 2px solid #2a4365;
+}
+
+.secondary-btn:hover {
+    background: #2a4365;
+    color: #fff;
+}
+
+/* Dark Mode - Button Text Color */
+.dark-mode .cta-buttons .btn {
+    color: #ffffff; /* White text color for buttons in dark mode */
+}
+
+/* Dark Mode - Primary Button */
+.dark-mode .cta-buttons .btn.primary-btn {
+    background-color: #4c6a92; /* Adjust primary button color if needed */
+}
+
+/* Dark Mode - Secondary Button */
+.dark-mode .cta-buttons .btn.secondary-btn {
+    background-color: #2a4365; /* Adjust secondary button color if needed */
+}
+
+/* Button Hover Animations */
+.cta-buttons .btn {
+    transition: all 0.3s ease; /* Smooth transition for all properties */
+}
+
+/* Hover effect for Primary Button */
+.cta-buttons .btn.primary-btn:hover {
+    transform: scale(1.1); /* Slightly enlarges the button */
+    background-color: #3b557d; /* Change background on hover (optional) */
+}
+
+/* Hover effect for Secondary Button */
+.cta-buttons .btn.secondary-btn:hover {
+    transform: scale(1.1); /* Slightly enlarges the button */
+    background-color: #1e3252; /* Change background on hover (optional) */
+}
+
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    #home {
+        flex-direction: column; /* Stack the content and image on smaller screens */
+        text-align: center;
+    }
+
+    .home-content {
+        max-width: 100%;
+        margin-right: 0;
+    }
+
+   
+}

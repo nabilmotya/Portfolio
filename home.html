@@ -1,0 +1,235 @@
+
+  <style>
+    /* Variables par défaut (mode clair) */
+    :root {
+      --bleu-techno: #2962FF;
+      --vert-innovation: #4FD1C5;
+      --bg-color: #F8FAFC;
+      --text-color: #0F172A;
+      --text-color-rgb: 15, 23, 42;
+      --border-opacity: 0.1;
+    }
+
+    /* Mode sombre */
+    .dark-mode {
+      --bg-color:  #2a4365;
+      --text-color: #F8FAFC;
+      --text-color-rgb: 248, 250, 252;
+      --border-opacity: 0.2;
+    }
+
+    body {
+      background: var(--bg-color);
+      color: var(--text-color);
+      transition: background 0.3s, color 0.3s;
+    }
+
+    #accueil {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      position: relative;
+    }
+ /* Variables synchronisées avec contact.html */
+    :root {
+        --primary-color: #2a4365;     /* Bleu foncé */
+        --secondary-color: #4FD1C5;   /* Turquoise */
+        --bg-color: #f8f9fa;          /* Fond clair */
+        --text-color: #2d3748;        /* Texte foncé */
+    }
+
+    .dark-mode {
+        --primary-color: #4FD1C5;     /* Turquoise */
+        --secondary-color: #2a4365;    /* Bleu foncé */
+        --bg-color: #1a202c;          /* Fond sombre (identique à contact.html) */
+        --text-color: #e2e8f0;         /* Texte clair */
+    }
+
+    /* Styles spécifiques à home.html */
+    #accueil {
+        background: var(--bg-color) !important;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        padding: 2rem;
+        transition: background 0.3s ease;
+    }
+
+    .nom { color: var(--primary-color) !important; }
+    
+    .detail-item {
+        background: rgba(255, 255, 255, 0.05) !important;
+        border: 1px solid var(--primary-color) !important;
+    }
+    .contenu-principal {
+      max-width: 1200px;
+      text-align: center;
+    }
+
+    .titre-hero {
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.2;
+      margin-bottom: 2rem;
+      font-size: 3.5rem;
+      font-weight: 700;
+    }
+
+    .accent-robot {
+      color: var(--vert-innovation);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      display: block;
+    }
+
+    .nom {
+      color: var(--text-color);
+      font-size: 3rem;
+      position: relative;
+      display: inline-block;
+      padding: 0 1rem;
+    }
+
+    .nom::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60%;
+      height: 3px;
+      background: var(--bleu-techno);
+    }
+
+    .sous-titre {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+
+    .deco-ligne {
+      flex: 1;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--vert-innovation), transparent);
+    }
+
+    .details-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin: 3rem 0;
+    }
+
+    .detail-item {
+      padding: 2rem;
+      border: 1px solid rgba(var(--text-color-rgb), var(--border-opacity));
+      border-radius: 12px;
+      transition: transform 0.3s ease;
+    }
+
+    .detail-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .icone-box {
+      width: 60px;
+      height: 60px;
+      background: var(--bleu-techno);
+      border-radius: 50%;
+      margin: 0 auto 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .icone-box i {
+      font-size: 1.8rem;
+      color: var(--text-color);
+    }
+
+    .boutons-cta {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 3rem;
+    }
+
+    .bouton {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 1rem 2rem;
+      border-radius: 30px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .bouton.principal {
+      background: var(--vert-innovation);
+      color: var(--bg-color);
+    }
+
+    .bouton.secondaire {
+      border: 2px solid var(--vert-innovation);
+      color: var(--vert-innovation);
+    }
+
+    .bouton:hover {
+      transform: scale(1.05);
+      box-shadow: 0 5px 15px rgba(79, 209, 197, 0.3);
+    }
+
+
+  </style>
+
+  <section id="accueil">
+    <div class="contenu-principal">
+      <div class="presentation">
+        <h1 class="titre-hero">
+          Bienvenue sur mon portfolio,<br>
+          je suis <span class="nom">Nabil Motya</span>
+        </h1>
+        
+        <div class="sous-titre">
+          <div class="deco-ligne"></div>
+          <p>Étudiant en Master 2 Mécatronique</p>
+          <div class="deco-ligne"></div>
+        </div>
+        
+        <div class="details-container">
+          <div class="detail-item">
+            <div class="icone-box">
+              <i class="fas fa-user"></i>
+            </div>
+            <h3>Profil</h3>
+            <p>Passionné, créatif, rigoureux et axé sur la résolution de problèmes, avec un fort intérêt pour la Robotique et l'optimisation de systèmes intelligents.</p>
+          </div>
+          
+          <div class="detail-item">
+            <div class="icone-box">
+              <i class="fas fa-search"></i>
+            </div>
+            <h3>Opportunités</h3>
+            <p>Je recherche activement des opportunités pour collaborer sur des projets ambitieux et technologiques.</p>
+          </div>
+        </div>
+        
+        <div class="boutons-cta">
+          <a href="#" id="voirMonParcours" class="bouton principal">
+            <span>Voir mon CV</span>
+            <i class="fas fa-chevron-right"></i>
+          </a>
+          
+          <a href="#" id="contactButton" class="bouton secondaire">
+            <span>Contactez-moi</span>
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </section>

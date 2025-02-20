@@ -1,0 +1,273 @@
+<!-- contact.html -->
+<section id="contact" class="contact-section">
+    <div class="contact-container">
+        <div class="contact-header">
+            <h2 class="section-title">Entrons en Contact<span class="blinking-cursor">_</span></h2>
+            <p class="section-subtitle">Poignée de main numérique initiée</p>
+        </div>
+
+        <div class="contact-grid">
+            <!-- Méthodes de Contact Principales -->
+            <div class="contact-methods">
+                <div class="contact-card email-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-paper-plane"></i>
+                    </div>
+                    <h3>Envoyer un Message</h3>
+                    <a href="mailto:your.email@example.com" class="email-link">nabilxmotya@gmail.com</a>
+                    <div class="signal-bar"></div>
+                </div>
+
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/nabilmotya/" target="_blank" rel="noopener noreferrer" 
+                       class="social-link linkedin" aria-label="Profil LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                        <span>Linkedin</span>
+                    </a>
+                    
+                    <a href="https://github.com/nabilmotya" target="_blank" rel="noopener noreferrer" 
+                       class="social-link github" aria-label="Profil GitHub">
+                        <i class="fab fa-github"></i>
+                        <span>Github</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Carte de Contact Créative -->
+            <div class="creative-contact">
+                <div class="hologram-card">
+                    <div class="glow-effect"></div>
+                    <h3>Autres Moyens de Communication</h3>
+                    <div class="contact-rainbow"></div>
+                    <p>Innovons ensemble !</p>
+                    <button class="neon-button" aria-label="Envoyer un message direct">
+                        <span class="neon-text">Démarrer une Conversation</span>
+                        <span class="neon-border"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<style>
+    /* Contact Section Styles */
+    .contact-section {
+        padding: 4rem 2rem;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        background: var(--bg-color);
+        transition: background 0.3s ease;
+    }
+
+    :root {
+        --primary-color: #2a4365;
+        --secondary-color: #4FD1C5;
+        --bg-color: #f8f9fa;
+        --text-color: #2d3748;
+    }
+
+    .dark-mode {
+        --primary-color: #4FD1C5;
+        --secondary-color: #2a4365;
+        --bg-color: #1a202c;
+        --text-color: #e2e8f0;
+    }
+
+    .contact-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .section-title {
+        font-size: 3.5rem;
+        color: var(--primary-color);
+        margin-bottom: 1rem;
+        position: relative;
+        font-family: 'Space Mono', monospace;
+    }
+
+    .blinking-cursor {
+        animation: blink 1s infinite;
+        color: var(--secondary-color);
+    }
+
+    .section-subtitle {
+        font-size: 1.25rem;
+        color: var(--text-color);
+        opacity: 0.8;
+        margin-bottom: 3rem;
+    }
+
+    /* Contact Grid Layout */
+    .contact-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+    }
+
+    /* Contact Cards */
+    .contact-card {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 2rem;
+        border-radius: 15px;
+        backdrop-filter: blur(10px);
+        margin-bottom: 2rem;
+        position: relative;
+        transition: transform 0.3s ease;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .contact-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .contact-icon {
+        font-size: 2.5rem;
+        color: var(--primary-color);
+        margin-bottom: 1rem;
+    }
+
+    .email-link {
+        font-size: 1.25rem;
+        color: var(--primary-color);
+        text-decoration: none;
+        position: relative;
+        padding: 0.5rem 0;
+        transition: color 0.3s ease;
+    }
+
+    .email-link::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: var(--secondary-color);
+        transition: width 0.3s ease;
+    }
+
+    .email-link:hover::after {
+        width: 100%;
+    }
+
+    /* Social Links */
+    .social-links {
+        display: grid;
+        gap: 1rem;
+    }
+
+    .social-link {
+        display: flex;
+        align-items: center;
+        padding: 1rem;
+        border-radius: 10px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+
+    .social-link i {
+        font-size: 1.5rem;
+        margin-right: 1rem;
+        transition: transform 0.3s ease;
+    }
+
+    .social-link:hover i {
+        transform: scale(1.2);
+    }
+
+    .linkedin { background: rgba(10, 102, 194, 0.1); color: #0A66C2; }
+    .github { background: rgba(23, 21, 21, 0.1); color: #171515; }
+
+    .dark-mode .linkedin { background: rgba(10, 102, 194, 0.2); }
+    .dark-mode .github { background: rgba(255, 255, 255, 0.1); }
+
+    /* Hologram Card */
+    .hologram-card {
+        position: relative;
+        padding: 2rem;
+        border-radius: 15px;
+        background: linear-gradient(145deg, rgba(79,209,197,0.1), rgba(42,67,101,0.1));
+        overflow: hidden;
+        border: 1px solid rgba(79,209,197,0.2);
+    }
+
+    .glow-effect {
+        position: absolute;
+        width: 150%;
+        height: 150%;
+        background: conic-gradient(
+            from 180deg at 50% 50%,
+            #4FD1C5 0deg,
+            #2a4365 120deg,
+            #4FD1C5 240deg
+        );
+        opacity: 0.1;
+        animation: rotate 20s linear infinite;
+        top: -25%;
+        left: -25%;
+    }
+
+    /* Animations */
+    @keyframes blink {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0; }
+    }
+
+    @keyframes rotate {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+    }
+
+    /* Neon Button */
+    .neon-button {
+        position: relative;
+        background: none;
+        border: none;
+        padding: 1rem 2rem;
+        margin-top: 1.5rem;
+        cursor: pointer;
+        overflow: hidden;
+    }
+
+    .neon-text {
+        position: relative;
+        color: var(--primary-color);
+        font-weight: bold;
+        z-index: 1;
+    }
+
+    .neon-border {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 2px solid var(--primary-color);
+        border-radius: 30px;
+        animation: neon-pulse 1.5s infinite;
+    }
+
+    @keyframes neon-pulse {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.5; }
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+        .section-title {
+            font-size: 2.5rem;
+        }
+
+        .contact-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .hologram-card {
+            margin-top: 2rem;
+        }
+    }
+</style>
